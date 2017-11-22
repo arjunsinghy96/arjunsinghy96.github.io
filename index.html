@@ -14,15 +14,20 @@
     <body>
       <!--Import jQuery before materialize.js-->
       <!-- Vue is great. Use Vue-->
-      <div id="app">
+      <div id="app" class="container">
       <!-- Side Navigation Stuff -->
         <ul class="side-nav fixed grey lighten-3 z-depth-3">
           <li><img style="width:90%; height:auto; margin:5%" class="circle" src="/assets/static/images/master_image.jpeg">
           <li v-for="item in navItems">
-            <a class='waves-effect' href='#'>{{item.name.toUpperCase()}}</a>
+            <a class='waves-effect' href='#' @click="changePage(item.name)">{{item.name.toUpperCase()}}</a>
           </li> 
         </ul>
       <!-- Side Navigation Stuff Ends -->
+      <div class="container">
+        <home-page v-if="currentPage === 'home'"></home-page>
+        <projects-page v-else-if="currentPage === 'projects'"></projects-page>
+        <blogs-page v-else-if="currentPage === 'blogs'"></blogs-page>
+      </div>
       </div>
       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
       <script type="text/javascript" src="/assets/js/app.js"></script>
