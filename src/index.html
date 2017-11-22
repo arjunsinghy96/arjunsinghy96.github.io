@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>arjunsinghy96</title>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+      <!--Import jQuery before materialize.js-->
+      <!-- Vue is great. Use Vue-->
+      <div id="app">
+      <!-- Side Navigation Stuff -->
+        <ul class="side-nav fixed grey lighten-3 z-depth-3">
+          <li><img style="width:90%; height:auto; margin:5%" class="circle" src="/static/images/master_image.jpeg">
+          <li v-for="item in navItems">
+            <a class='waves-effect' href='#'>{{item.name.toUpperCase()}}</a>
+          </li> 
+        </ul>
+      <!-- Side Navigation Stuff Ends -->
+      </div>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
+      <script type="text/javascript" src="js/app.js"></script>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+    </body>
+  </html>
