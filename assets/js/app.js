@@ -1,5 +1,20 @@
 Vue.component('home-page', {
-  template: '<p>This is the home page</p>'
+  data: function() {
+    return {
+      skills: [
+        { name: 'Python',
+          description: 'I tried Python in 2016 an I am in love with it ever since.' },
+        { name: 'Node',
+          description: 'Started using it just for fun. It continues to amaze me.'},
+        { name: 'DS and Algo',
+          description: 'In the world of computer science you never know enough of these.'},
+        { name: 'Backend',
+          description: 'The thing I like to engage with the most. It\'s all backend.'},
+        { name: 'Frontend',
+          description: 'I also like to build cool frontend like this one. Believe it!!'}
+      ]
+    }
+    }  
   })
 
 Vue.component('projects-page', {
