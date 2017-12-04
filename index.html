@@ -12,13 +12,13 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
-    <body>
+    <body class="grey lighten-3">
       <!--Import jQuery before materialize.js-->
       <!-- Vue is great. Use Vue-->
       <div id="app">
       <!-- Side Navigation Stuff -->
         <ul id="slide-out" class="side-nav fixed grey lighten-2 z-depth-4">
-          <li><img style="width:90%; height:auto; margin:5%" class="circle" src="/assets/static/images/master_image.jpeg">
+          <li><img style="width:100%; height:auto; margin:0%"  src="/assets/static/images/master_image.jpeg">
           <li v-for="item in navItems">
             <a class='waves-effect' href='#' @click="changePage(item.name)">{{item.name.toUpperCase()}}</a>
           </li> 
@@ -30,19 +30,20 @@
       <div class="content">
         <home-page v-if="currentPage === 'home'" inline-template>
           <div>
-            <h3>Hi!! I am Arjun.</h3>
-            <p>I am a senior year computer science undergrad at SMVD University, India.</p>
+            <h5>Backend Developer</h5>
             <p>I build cool backend features using my tech toolbox</p>
             <p>Lets see what's in the box</p>
             <div class="row">
               <div v-for="skill in skills" class="col s12 m4 l4">
                 
-                  <div class="card grey lighten-3">
-                    <div class="card-content">
-                      <span class="card-title">{{ skill.name }}</span>
+                  <div class="card hoverable grey lighten-2" height="300px">
+                    <div class="card-image waves-effect waves-block waves-light">
+                      <img class="activator" v-bind:src="skill.image">
+                    </div>
+                    <div class="card-reveal grey lighten-2">
+                      <span class="card-title">{{skill.name}}</span>
                       <p>{{ skill.description }}</p>
                     </div>
-                  
                 </div>
               </div>
             </div>

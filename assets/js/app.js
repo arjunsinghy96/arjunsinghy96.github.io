@@ -3,15 +3,20 @@ Vue.component('home-page', {
     return {
       skills: [
         { name: 'Python',
-          description: 'I tried Python in 2016 an I am in love with it ever since.' },
+          description: 'I tried Python in 2016 and I am in love with it ever since.',
+          image: 'assets/static/images/python.png' },
         { name: 'Node',
-          description: 'Started using it just for fun. It continues to amaze me.'},
+          description: 'Started using it just for fun. It continues to amaze me.',
+          image: 'assets/static/images/node.png'},
         { name: 'DS and Algo',
-          description: 'In the world of computer science you never know enough of these.'},
+          description: 'In the world of computer science you never know enough of these.',
+          image: 'assets/static/images/ds_algo.png'},
         { name: 'Backend',
-          description: 'The thing I like to engage with the most. It\'s all backend.'},
+          description: 'The thing I like to engage with the most. It\'s all backend.',
+          image: 'assets/static/images/default.png'},
         { name: 'Frontend',
-          description: 'I also like to build cool frontend like this one. Believe it!!'}
+          description: 'I also like to build cool frontend like this one. Believe it!!',
+          image: 'assets/static/images/default.png'}
       ]
     }
     }  
