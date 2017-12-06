@@ -1,3 +1,25 @@
+.title {
+  position: relative;
+  text-transform: lowercase;
+  font-family: Raleway, Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: 3rem;
+  color: #2A3A3F;
+  display: block;
+  margin: 0;
+}
+
+.title:after {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  content: "";
+  height: 2px;
+  width: 90%;
+  opacity: 0.4;
+  background-color: #757575;
+}
+
 @media only screen and (max-width: 600px) {
   .content {
     padding-left: 10px;

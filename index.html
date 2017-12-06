@@ -30,9 +30,16 @@
       <div class="content">
         <home-page v-if="currentPage === 'home'" inline-template>
           <div>
-            <h5>Backend Developer</h5>
-            <p>I build cool backend features using my tech toolbox</p>
-            <p>Lets see what's in the box</p>
+            <h5></h5>
+            <p>Hi! My name is Arjun. I'm a software developer.</p>
+            <div class="row">
+              <div class="col s12 m6 l6 offset-m3 offset-l3">
+                <center>
+                  <p class="title">my skill set</p>
+                  <h5>I make reliable and quality software</h5>
+                </center>
+              </div>
+            </div>
             <div class="row">
               <div v-for="skill in skills" class="col s12 m4 l4">
                 
@@ -41,7 +48,7 @@
                       <img class="activator" v-bind:src="skill.image">
                     </div>
                     <div class="card-reveal grey lighten-2">
-                      <span class="card-title">{{skill.name}}</span>
+                      <span class="card-title">{{skill.name}}<i class="material-icons right">close</i></span>
                       <p>{{ skill.description }}</p>
                     </div>
                 </div>
