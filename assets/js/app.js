@@ -35,9 +35,12 @@ var app = new Vue({
   data: {
     message: "Hello, this is going fine!",
     navItems: [
-       {name : 'Home'},
-       {name : 'Projects'},
-       {name : 'Blogs'}
+       {name : 'Home',
+        icon : 'home'},
+       {name : 'Projects',
+        icon : 'code'},
+       {name : 'Blogs',
+        icon : 'rss_feed'}
        ],
     currentPage: 'home'
     },

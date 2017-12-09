@@ -12,31 +12,36 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
-    <body class="grey lighten-3">
+    <body>
       <!--Import jQuery before materialize.js-->
       <!-- Vue is great. Use Vue-->
       <div id="app">
       <!-- Side Navigation Stuff -->
-        <ul id="slide-out" class="side-nav fixed grey lighten-2 z-depth-4">
-          <li><img style="width:100%; height:auto; margin:0%"  src="/assets/static/images/master_image.jpeg">
-          <li v-for="item in navItems">
-            <a class='waves-effect' href='#' @click="changePage(item.name)">{{item.name.toUpperCase()}}</a>
-          </li> 
-        </ul>
-        
-        <a href="#" data-activates="slide-out" class="button-collapse btn-floating waves-effect waves-light blue"><i class="material-icons">menu</i></a>
+        <div class="navbar-fixed" style="height:0px !important">
+          <nav class="transparent z-depth-0" height="43px !important">
+            <ul id="slide-out" class="side-nav fixed grey lighten-2 z-depth-4">
+              <li><img style="width:100%; height:auto; margin:0%"  src="/assets/static/images/master_image.jpeg">
+              <li v-for="item in navItems">
+                <a class='waves-effect' href='#' @click="changePage(item.name)"><i class="material-icons left">{{item.icon}}</i>{{item.name.toUpperCase()}}</a>
+              </li> 
+            </ul>
+            
+            <a href="#" data-activates="slide-out" margin="0" class="button-collapse btn-floating waves-effect waves-light grey darken-3"><i class="material-icons">menu</i></a>
+          </nav>
+        </div>
       <!-- Side Navigation Stuff Ends -->
       
-      <div class="content">
+      <div class="content grey lighten-3">
         <home-page v-if="currentPage === 'home'" inline-template>
           <div>
-            <h5></h5>
-            <p>Hi! My name is Arjun. I'm a software developer.</p>
+            <h5>Hi! My name is Arjun. I'm a software developer.</h5>
+            <h5>For me <del>quantity</del> quality matters</h5>
+            <br>
             <div class="row">
               <div class="col s12 m6 l6 offset-m3 offset-l3">
                 <center>
                   <p class="title">my skill set</p>
-                  <h5>I make reliable and quality software</h5>
+                  <p class="subtitle">I make reliable and quality software</p>
                 </center>
               </div>
             </div>

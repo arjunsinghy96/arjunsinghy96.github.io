@@ -1,5 +1,22 @@
-.title {
+nav a.button-collapse, nav a.button-collapse i {
+  height: 43px;
+  width: 43px;
+  line-height: 43px;
+  font-weight: 500;
+}
+
+.subtitle {
   position: relative;
+  text-transform: lowercase;
+  font-family: Raleway, Arial, Halvetica, sans-serif;
+  font-weight: 550;
+  font-size: 1.25rem;
+  display: block;
+  margin: 0;
+}
+
+.title {
+  position: relative !important;
   text-transform: lowercase;
   font-family: Raleway, Arial, Helvetica, sans-serif;
   font-weight: 800;
