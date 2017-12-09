@@ -1,79 +1,82 @@
 <!DOCTYPE html>
-  <html>
-    <head>
-      <title>arjunsinghy96</title>
-      <!--Import Google Icon Font-->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="/assets/css/materialize.min.css"  media="screen,projection"/>
-      <link type="text/css" rel="stylesheet" href="/assets/css/style.css" media="screen,projection"/>
+<html>
 
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
+<head>
+    <title>arjunsinghy96</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="/assets/css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="/assets/css/style.css" media="screen,projection" />
 
-    <body>
-      <!--Import jQuery before materialize.js-->
-      <!-- Vue is great. Use Vue-->
-      <div id="app">
-      <!-- Side Navigation Stuff -->
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <!--Import jQuery before materialize.js-->
+    <!-- Vue is great. Use Vue-->
+    <div id="app">
+        <!-- Side Navigation Stuff -->
         <div class="navbar-fixed" style="height:0px !important">
-          <nav class="transparent z-depth-0" height="43px !important">
-            <ul id="slide-out" class="side-nav fixed grey lighten-2 z-depth-4">
-              <li><img style="width:100%; height:auto; margin:0%"  src="/assets/static/images/master_image.jpeg">
-              <li v-for="item in navItems">
-                <a class='waves-effect' href='#' @click="changePage(item.name)"><i class="material-icons left">{{item.icon}}</i>{{item.name.toUpperCase()}}</a>
-              </li> 
-            </ul>
-            
-            <a href="#" data-activates="slide-out" margin="0" class="button-collapse btn-floating waves-effect waves-light grey darken-3"><i class="material-icons">menu</i></a>
-          </nav>
+            <nav class="transparent z-depth-0" height="43px !important">
+                <ul id="slide-out" class="side-nav fixed grey lighten-2 z-depth-4">
+                    <li><img style="width:100%; height:auto; margin:0%" src="/assets/static/images/master_image.jpeg">
+                        <li v-for="item in navItems">
+                            <a class='waves-effect' href='#' @click="changePage(item.name)"><i class="material-icons left">{{item.icon}}</i>{{item.name.toUpperCase()}}</a>
+                        </li>
+                </ul>
+
+                <a href="#" data-activates="slide-out" margin="0" class="button-collapse btn-floating waves-effect waves-light grey darken-3"><i class="material-icons">menu</i></a>
+            </nav>
         </div>
-      <!-- Side Navigation Stuff Ends -->
-      
-      <div class="content grey lighten-3">
-        <home-page v-if="currentPage === 'home'" inline-template>
-          <div>
-            <h5>Hi! My name is Arjun. I'm a software developer.</h5>
-            <h5>For me <del>quantity</del> quality matters</h5>
-            <br>
-            <div class="row">
-              <div class="col s12 m6 l6 offset-m3 offset-l3">
-                <center>
-                  <p class="title">my skill set</p>
-                  <p class="subtitle">I make reliable and quality software</p>
-                </center>
-              </div>
-            </div>
-            <div class="row">
-              <div v-for="skill in skills" class="col s12 m4 l4">
-                
-                  <div class="card hoverable grey lighten-2" height="300px">
-                    <div class="card-image waves-effect waves-block waves-light">
-                      <img class="activator" v-bind:src="skill.image">
+        <!-- Side Navigation Stuff Ends -->
+
+        <div class="content grey lighten-3">
+            <home-page v-if="currentPage === 'home'" inline-template>
+                <div>
+                    <h5>Hi! My name is Arjun. I'm a software developer.</h5>
+                    <h5>For me <del>quantity</del> quality matters</h5>
+                    <br>
+                    <div class="row">
+                        <div class="col s12 m6 l6 offset-m3 offset-l3">
+                            <center>
+                                <p class="title">my skill set</p>
+                                <p class="subtitle">I make reliable and quality software</p>
+                            </center>
+                        </div>
                     </div>
-                    <div class="card-reveal grey lighten-2">
-                      <span class="card-title">{{skill.name}}<i class="material-icons right">close</i></span>
-                      <p>{{ skill.description }}</p>
+                    <div class="row">
+                        <div v-for="skill in skills" class="col s12 m4 l4">
+
+                            <div class="card hoverable grey lighten-2" height="300px">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                    <img class="activator" v-bind:src="skill.image">
+                                </div>
+                                <div class="card-reveal grey lighten-2">
+                                    <span class="card-title">{{skill.name}}<i class="material-icons right">close</i></span>
+                                    <p>{{ skill.description }}</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </home-page>
-        <projects-page v-else-if="currentPage === 'projects'"></projects-page>
-        <blogs-page v-else-if="currentPage === 'blogs'"></blogs-page>
-      </div>
-      </div>
-      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
-      <script type="text/javascript" src="/assets/js/app.js"></script>
-      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-      <script type="text/javascript" src="/assets/js/materialize.min.js"></script>
-      <script type="text/javascript">
-        $(document).ready(function(){
-          $('.carousel').carousel();
+            </home-page>
+            <projects-page v-else-if="currentPage === 'projects'"></projects-page>
+            <blogs-page v-else-if="currentPage === 'blogs'"></blogs-page>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script type="text/javascript" src="/assets/js/app.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/materialize.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.carousel').carousel();
         });
         $(".button-collapse").sideNav();
-      </script>
-    </body>
-  </html>
+
+    </script>
+</body>
+
+</html>
