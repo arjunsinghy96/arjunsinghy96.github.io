@@ -1,8 +1,7 @@
-nav a.button-collapse, nav a.button-collapse i {
-  height: 43px;
-  width: 43px;
-  line-height: 43px;
-  font-weight: 500;
+#button-collapse{
+    left: 5px;
+    top: 5px;
+    position: fixed;
 }
 
 .subtitle {
@@ -41,6 +40,8 @@ nav a.button-collapse, nav a.button-collapse i {
   .content {
     padding-left: 10px;
     padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 
@@ -48,11 +49,15 @@ nav a.button-collapse, nav a.button-collapse i {
   .content {
     padding-left: 15px;
     padding-right: 15px;
+    padding-top:10px;
+    padding-bottom: 10px;
     }
 }
 
 @media only screen and (min-width: 992px) {
   .content {
     padding-left: 325px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     }
 }

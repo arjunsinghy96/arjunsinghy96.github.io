@@ -18,21 +18,17 @@
     <!-- Vue is great. Use Vue-->
     <div id="app">
         <!-- Side Navigation Stuff -->
-        <div class="navbar-fixed" style="height:0px !important">
-            <nav class="transparent z-depth-0" height="43px !important">
-                <ul id="slide-out" class="side-nav fixed grey lighten-2 z-depth-4">
-                    <li><img style="width:100%; height:auto; margin:0%" src="/assets/static/images/master_image.jpeg">
-                        <li v-for="item in navItems">
-                            <a class='waves-effect' href='#' @click="changePage(item.name)"><i class="material-icons left">{{item.icon}}</i>{{item.name.toUpperCase()}}</a>
-                        </li>
-                </ul>
-
-                <a href="#" data-activates="slide-out" margin="0" class="button-collapse btn-floating waves-effect waves-light grey darken-3"><i class="material-icons">menu</i></a>
-            </nav>
+        <div>
+            <ul id="slide-out" class="side-nav fixed grey darken-4 z-depth-0">
+                <li><img style="width:100%; height:auto; margin:0%" src="/assets/static/images/master_image.jpeg"></li>
+                <li v-for="item in navItems">
+                    <a class='waves-effect grey-text text-lighten-4' href='#' @click="changePage(item.name)"><i class="material-icons left grey-text text-lighten-4">{{item.icon}}</i>{{item.name.toUpperCase()}}</a>
+                </li>
+            </ul>
+            <a id="button-collapse" data-activates="slide-out" class="button-collapase btn-floating waves-effect waves-light blue"><i class="material-icons">menu</i></a>
+            <!-- Side Navigation Stuff Ends -->
         </div>
-        <!-- Side Navigation Stuff Ends -->
-
-        <div class="content grey lighten-3">
+        <div class="content grey lighten-5">
             <home-page v-if="currentPage === 'home'" inline-template>
                 <div>
                     <h5>Hi! My name is Arjun. I'm a software developer.</h5>
@@ -71,10 +67,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="/assets/js/materialize.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function() {
-            $('.carousel').carousel();
-        });
-        $(".button-collapse").sideNav();
+        $("#button-collapse").sideNav();
 
     </script>
 </body>
