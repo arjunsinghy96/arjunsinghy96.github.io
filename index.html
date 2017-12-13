@@ -19,7 +19,7 @@
     <div id="app">
         <!-- Side Navigation Stuff -->
         <div>
-            <ul id="slide-out" class="side-nav fixed grey darken-4 z-depth-0">
+            <ul id="slide-out" :class="['side-nav fixed z-depth-0', color[currentPage]]">
                 <li><img style="width:100%; height:auto; margin:0%" src="/assets/static/images/master_image.jpeg"></li>
                 <li v-for="item in navItems">
                     <a class='waves-effect grey-text text-lighten-4' href='#' @click="changePage(item.name)"><i class="material-icons left grey-text text-lighten-4">{{item.icon}}</i>{{item.name.toUpperCase()}}</a>
@@ -28,11 +28,15 @@
             <a id="button-collapse" data-activates="slide-out" class="button-collapase btn-floating waves-effect waves-light blue"><i class="material-icons">menu</i></a>
             <!-- Side Navigation Stuff Ends -->
         </div>
+        <div :class="['header content', color[currentPage], 'waves-effect waves-light']">
+            <div class="head-content">
+                <p class="headline">{{ heading[currentPage] }}</p>
+                <p class="subheadline">{{ description[currentPage] }}</p>
+            </div>
+        </div>
         <div class="content grey lighten-5">
             <home-page v-if="currentPage === 'home'" inline-template>
                 <div>
-                    <h5>Hi! My name is Arjun. I'm a software developer.</h5>
-                    <h5>For me <del>quantity</del> quality matters</h5>
                     <br>
                     <div class="row">
                         <div class="col s12 m6 l6 offset-m3 offset-l3">
@@ -58,6 +62,7 @@
                     </div>
                 </div>
             </home-page>
+
             <projects-page v-else-if="currentPage === 'projects'"></projects-page>
             <blogs-page v-else-if="currentPage === 'blogs'"></blogs-page>
         </div>

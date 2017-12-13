@@ -16,7 +16,7 @@ Vue.component('home-page', {
           image: 'assets/static/images/default.png'},
         { name: 'Frontend',
           description: 'I also like to build cool frontend like this one. Believe it!!',
-          image: 'assets/static/images/default.png'}
+          image: 'assets/static/images/frontend.png'}
       ]
     }
     }  
@@ -42,7 +42,22 @@ var app = new Vue({
        {name : 'Blogs',
         icon : 'rss_feed'}
        ],
-    currentPage: 'home'
+    currentPage: 'home',
+    color: {
+        home: 'grey darken-4',
+        projects: 'light-green darken-4',
+        blogs: 'red darken-4'
+        },
+    description: {
+        home: 'Software Developer, Web Techie',
+        projects: 'What I have been upto',
+        blogs: 'Just hear me out'
+      },
+    heading: {
+        home: 'Hi, I\'m Arjun',
+        projects: 'My Work',
+        blogs: 'Stories'
+    }
     },
   methods: {
     changePage: function(pageName) {
