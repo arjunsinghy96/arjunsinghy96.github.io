@@ -1,80 +1,22 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<head>
-    <title>arjunsinghy96</title>
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="/assets/css/materialize.min.css" media="screen,projection" />
-    <link type="text/css" rel="stylesheet" href="/assets/css/style.css" media="screen,projection" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
 
-<body>
-    <!--Import jQuery before materialize.js-->
-    <!-- Vue is great. Use Vue-->
-    <div id="app">
-        <!-- Side Navigation Stuff -->
-        <div>
-            <ul id="slide-out" :class="['side-nav fixed z-depth-0', color[currentPage]]">
-                <li><img style="width:100%; height:auto; margin:0%" src="/assets/static/images/master_image.jpeg"></li>
-                <li v-for="item in navItems">
-                    <a class='waves-effect grey-text text-lighten-4' href='#' @click="changePage(item.name)"><i class="material-icons left grey-text text-lighten-4">{{item.icon}}</i>{{item.name.toUpperCase()}}</a>
-                </li>
-            </ul>
-            <a id="button-collapse" data-activates="slide-out" class="button-collapase btn-floating waves-effect waves-light blue"><i class="material-icons">menu</i></a>
-            <!-- Side Navigation Stuff Ends -->
-        </div>
-        <div :class="['header content', color[currentPage], 'waves-effect waves-light']">
-            <div class="head-content">
-                <p class="headline">{{ heading[currentPage] }}</p>
-                <p class="subheadline">{{ description[currentPage] }}</p>
-            </div>
-        </div>
-        <div class="content grey lighten-5">
-            <home-page v-if="currentPage === 'home'" inline-template>
-                <div>
-                    <br>
-                    <div class="row">
-                        <div class="col s12 m6 l6 offset-m3 offset-l3">
-                            <center>
-                                <p class="title">my skill set</p>
-                                <p class="subtitle">I make reliable and quality software</p>
-                            </center>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div v-for="skill in skills" class="col s12 m4 l4">
-
-                            <div class="card hoverable grey lighten-2" height="300px">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                    <img class="activator" v-bind:src="skill.image">
-                                </div>
-                                <div class="card-reveal grey lighten-2">
-                                    <span class="card-title">{{skill.name}}<i class="material-icons right">close</i></span>
-                                    <p>{{ skill.description }}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </home-page>
-
-            <projects-page v-else-if="currentPage === 'projects'"></projects-page>
-            <blogs-page v-else-if="currentPage === 'blogs'"></blogs-page>
-        </div>
-    </div>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script type="text/javascript" src="/assets/js/app.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="/assets/js/materialize.min.js"></script>
-    <script type="text/javascript">
-        $("#button-collapse").sideNav();
-
-    </script>
-</body>
-
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
 </html>
