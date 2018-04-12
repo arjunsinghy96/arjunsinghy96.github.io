@@ -1,18 +1,3 @@
-var skills = [
-    'Python',
-    'Django',
-    'REST',
-    'Celery',
-    'Relational Database',
-    'oEmbed',
-    'Django Deployment',
-    'Javascript',
-    'HTML/CSS',
-    'Twitter Bootstrap',
-    'D3.js',
-    'NodeJS',
-]
-
 var projects = {
     'MediumTrends': {
         'img': '/media/images/medium_trends.png',
@@ -43,11 +28,6 @@ var projects = {
 }
 
 $('document').ready(function(){
-    skills.forEach(function(skill){
-        $('#skills').append(
-            `<span class="badge badge-secondary mr-1">` + skill + `</span>`
-        );
-    })
     Object.keys(projects).forEach(function(project){
         var p = `
         <div class="row mb-3">
