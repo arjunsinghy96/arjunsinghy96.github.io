@@ -4,6 +4,8 @@ var skills = [
     'REST',
     'Celery',
     'Relational Database',
+    'oEmbed',
+    'Django Deployment',
     'Javascript',
     'HTML/CSS',
     'Twitter Bootstrap',
