@@ -46,6 +46,7 @@
                     <h5 class="mt-2 font-weight-bold d-none d-md-block">{{project.name}}</h5>
                     <h5 class="mt-2 font-weight-bold text-center d-md-none">{{project.name}}</h5>
                     <p class="text-justify" v-html="project.description"></p>
+                    <p v-if="project.mentor"><strong>Mentor: </strong><a :href="project.mentor.url" target="_blank">{{project.mentor.name}}</a></p>
                     <div class="row">
                         <h5 class="col">
                             <span v-for="tag in project.tags" class="badge badge-secondary mr-1">{{tag}}</span>

@@ -16,7 +16,11 @@ new Vue({
                     'HTML/CSS',
                     'Javascript',
                     'Deployment',
-                ]
+                ],
+                'mentor': {
+                    "name": "Ruben Wolff",
+                    "url": "https://twitter.com/Ruben_Wolff"
+                }
             },
             {
                 'name': 'MediumTrends',
@@ -32,7 +36,11 @@ new Vue({
                     'oEmbed',
                     'Javascript',
                     'Deployment'
-                ]
+                ],
+                'mentor': {
+                    "name": "Ruben Wolff",
+                    "url": "https://twitter.com/Ruben_Wolff"
+                }
             },
             {
                 'name': 'PubmedTrends',
@@ -48,7 +56,11 @@ new Vue({
                     'oEmbed',
                     'Javascript',
                     'Deployment'
-                ]
+                ],
+                'mentor': {
+                    "name": "Ruben Wolff",
+                    "url": "https://twitter.com/Ruben_Wolff"
+                }
             },
             {
                 'name': "shorty",
@@ -59,7 +71,8 @@ new Vue({
                 'tags': [
                     'ExpressJS',
                     'MonogoDB',
-                ]
+                ],
+                'mentor': null,
             }
         ]
     }

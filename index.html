@@ -25,7 +25,7 @@
                     <a class="nav-link text-secondary" href="#">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="text-bold nav-link btn btn-sm btn-success hover" href="https://www.upwork.com/freelancers/~01883b81d446951120">Hire Me</a>
+                    <a class="text-bold nav-link btn btn-sm btn-success hover btn-edge" href="https://www.upwork.com/freelancers/~01883b81d446951120">Hire Me</a>
                 </li>
               </ul>
             </div>
@@ -55,6 +55,7 @@
                     <h5 class="mt-2 font-weight-bold d-none d-md-block">{{project.name}}</h5>
                     <h5 class="mt-2 font-weight-bold text-center d-md-none">{{project.name}}</h5>
                     <p class="text-justify" v-html="project.description"></p>
+                    <p><strong>Mentor: </strong><a :href="project.mentor.url" target="_blank">{{project.mentor.name}}</a></p>
                     <div class="row">
                         <h5 class="col">
                             <span v-for="tag in project.tags" class="badge badge-secondary mr-1">{{tag}}</span>
